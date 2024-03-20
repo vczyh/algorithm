@@ -4,6 +4,7 @@ package sort
 
 // BubbleSort 冒泡排序
 // 时间复杂度：O(n^2)
+// 空间复杂度：O(1)
 func BubbleSort(arr []int) {
 	n := len(arr)
 	for i := 0; i < n; i++ {
@@ -19,6 +20,7 @@ func BubbleSort(arr []int) {
 
 // SelectSort 选择排序
 // 时间复杂度：O(n^2)
+// 空间复杂度：O(1)
 func SelectSort(arr []int) {
 	n := len(arr)
 	for i := 0; i < n; i++ {
@@ -36,6 +38,7 @@ func SelectSort(arr []int) {
 
 // InsertSort 插入排序
 // 时间复杂度：O(n^2)
+// 空间复杂度：O(1)
 func InsertSort(arr []int) {
 	n := len(arr)
 	for i := 1; i < n; i++ {
@@ -51,6 +54,7 @@ func InsertSort(arr []int) {
 
 // ShellSort 希尔排序 交换元素
 // 时间复杂度：O(n^3/2)
+// 空间复杂度：O(1)
 func ShellSort(arr []int) {
 	n := len(arr)
 	for gap := n / 2; gap > 0; gap /= 2 {
@@ -69,6 +73,7 @@ func ShellSort(arr []int) {
 
 // ShellSort2 希尔排序 移动元素
 // 时间复杂度：O(n^3/2)
+// 空间复杂度：O(1)
 func ShellSort2(arr []int) {
 	n := len(arr)
 	for gap := n / 2; gap > 0; gap /= 2 {
@@ -105,6 +110,8 @@ func ShellSort2(arr []int) {
 //}
 
 // MergeSort 归并排序
+// 时间复杂度：O(nlogn)
+// 空间复杂度：O(n)
 func MergeSort(arr []int) []int {
 	n := len(arr)
 	if n <= 1 {
