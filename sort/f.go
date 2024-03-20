@@ -103,3 +103,40 @@ func ShellSort2(arr []int) {
 //		}
 //	}
 //}
+
+// MergeSort 归并排序
+func MergeSort(arr []int) []int {
+	n := len(arr)
+	if n <= 1 {
+		return arr
+	}
+	mid := n / 2
+	// 左边归并排序
+	left := MergeSort(arr[:mid])
+	// 右边归并排序
+	right := MergeSort(arr[mid:])
+	// 合并
+	return mergeSortMerge(left, right)
+}
+
+func mergeSortMerge(left, right []int) []int {
+	ll := len(left)
+	rl := len(right)
+
+	var arr []int
+	l, r := 0, 0
+
+	for l < ll && r < rl {
+		if left[l] < right[r] {
+			arr = append(arr, left[l])
+			l++
+		} else {
+			arr = append(arr, right[r])
+			r++
+		}
+	}
+
+	arr = append(arr, left[l:]...)
+	arr = append(arr, right[r:]...)
+	return arr
+}

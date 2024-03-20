@@ -47,3 +47,10 @@ func TestShellSort2(t *testing.T) {
 		assert.Equal(t, data.expected, data.arr)
 	}
 }
+
+func TestMergeSort(t *testing.T) {
+	for _, data := range data {
+		res := MergeSort(data.arr)
+		assert.Equal(t, data.expected, res)
+	}
+}
